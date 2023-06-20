@@ -21,7 +21,6 @@ namespace RohitDI_Mvc.Controllers
             return View(new Registration());
         }
         [HttpPost]
-        //[ValidateAntiForgeryToken]
         [ValidateAntiForgeryToken]
         public ActionResult Index(Registration registration,string Command)
         {
@@ -36,9 +35,7 @@ namespace RohitDI_Mvc.Controllers
                     registration.CreatedOn = DateTime.Now;
                     if (_IRegistration.AddUser(registration) > 0)
                     {
-
-                        //this is GetHashCode by rohit pal 
-
+                        
                         TempData["MessageRegistration"] = "Data Saved Successfully!";
                     }
                 }
