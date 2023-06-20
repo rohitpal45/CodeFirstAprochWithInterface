@@ -21,6 +21,7 @@ namespace RohitDI_Mvc.Controllers
             return View(new Registration());
         }
         [HttpPost]
+        //[ValidateAntiForgeryToken]
         [ValidateAntiForgeryToken]
         public ActionResult Index(Registration registration,string Command)
         {
