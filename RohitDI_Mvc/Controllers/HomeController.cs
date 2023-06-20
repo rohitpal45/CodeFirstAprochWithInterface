@@ -35,6 +35,9 @@ namespace RohitDI_Mvc.Controllers
                     registration.CreatedOn = DateTime.Now;
                     if (_IRegistration.AddUser(registration) > 0)
                     {
+
+                        //this is GetHashCode by rohit pal 
+
                         TempData["MessageRegistration"] = "Data Saved Successfully!";
                     }
                 }
